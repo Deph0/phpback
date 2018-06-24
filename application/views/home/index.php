@@ -12,7 +12,28 @@
 		
 		<br/>
 		
-		<div class="col-md-6">
+        <div class="col-md-12">
+			<div class="ideas-new">
+				<h6><?= $lang['last_new_ideas']; ?></h6>
+				<small>
+				<table class="table table-hover">
+					<?php foreach ($ideas['new'] as $idea): ?>
+						<tr>
+							<td>
+								<span class="label label-default new-idea--tag" style="margin-right:5px">
+									<?= $lang['idea_new']; ?>
+								</span>
+								<a href="<?= $idea->url; ?>">
+									<?= $idea->title; ?>
+								</a>
+							</td>
+						</tr>
+					<?php endforeach; ?>
+				</table>
+				</small>
+			</div>
+        </div>
+		<div class="col-md-12"> <!-- col-md-6 -->
 			<div class="ideas-completed">
 				<h6><?= $lang['last_completed_ideas']; ?></h6>
 				<small>
@@ -53,7 +74,7 @@
 			</div>
 		</div>
 		
-		<div class="col-md-6">
+		<div class="col-md-12"> <!--  col-md-6 -->
 			<div class="ideas-started">
 				<h6><?= $lang['last_started_ideas']; ?></h6>
 				<small>
@@ -93,26 +114,4 @@
 				</small>
 			</div>
 		</div>
-<div class="col-md-12">
-
-			<div class="ideas-new">
-				<h6><?= $lang['last_new_ideas']; ?></h6>
-				<small>
-				<table class="table table-hover">
-					<?php foreach ($ideas['new'] as $idea): ?>
-						<tr>
-							<td>
-								<span class="label label-default new-idea--tag" style="margin-right:5px">
-									<?= $lang['idea_new']; ?>
-								</span>
-								<a href="<?= $idea->url; ?>">
-									<?= $idea->title; ?>
-								</a>
-							</td>
-						</tr>
-					<?php endforeach; ?>
-				</table>
-				</small>
-			</div>
-</div>
 	</div>

@@ -42,7 +42,7 @@ body {
 
 
 
-.ideas-completed, .ideas-started, .ideas-planned, .ideas-considered
+.ideas-completed, .ideas-started, .ideas-planned, .ideas-considered, .ideas-new
 {
 	border: 1px solid #3498DB;
 	border-radius:5px;
@@ -67,6 +67,10 @@ body {
 	border-color:#95A5A6;
 }
 
+.ideas-new
+{
+	border-color:#95A5A6;
+}
 
 
 .vote-count-box
