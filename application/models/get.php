@@ -47,7 +47,8 @@ class Get extends CI_Model
 
     public function getQuantityOfApprovedIdeas($categoryid){
         $categoryid = (int) $categoryid;
-        $query = $this->db->query("SELECT * FROM ideas WHERE categoryid='$categoryid' AND status !='new'");
+        // $query = $this->db->query("SELECT * FROM ideas WHERE categoryid='$categoryid' AND status !='new'");
+        $query = $this->db->query("SELECT * FROM ideas WHERE categoryid='$categoryid'");
         return $query->num_rows();
     }
 
@@ -99,7 +100,8 @@ class Get extends CI_Model
     	$category = (int) $category;
         $max = $this->getSetting('max_results');
         $from = ($page - 1) * $max;
-    	$query = "SELECT * FROM ideas WHERE categoryid='$category' AND status !='new' ORDER BY ";
+    	// $query = "SELECT * FROM ideas WHERE categoryid='$category' AND status !='new' ORDER BY ";
+    	$query = "SELECT * FROM ideas WHERE categoryid='$category' ORDER BY ";
         switch ($order) {
             case 'id':
                 $query .= "id ";

@@ -21,7 +21,7 @@
 				<h6><?php echo $lang['label_categories']; ?></h6>
 				<ul class="nav nav-pills nav-stacked">
 				 <?php foreach($categories as $cat) { ?>
-					<li <?php if(!$cat->ideas) echo 'class="disabled"';?>><a href="<?php echo $cat->url; ?>"><?php echo $cat->name; ?><span class="badge"><?php echo $cat->ideas; ?></span></a></li>
+					<li><a href="<?php echo $cat->url; ?>"><?php echo $cat->name; ?><span class="badge"><?php echo $cat->ideas; ?></span></a></li>
 				 <?php } ?>
 				</ul>
 				<br>
