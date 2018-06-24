@@ -36,6 +36,7 @@ class Home extends CI_Controller {
             'started' => $this->get->getIdeas('id', 1, 0, 10, array('started')),
             'planned' => $this->get->getIdeas('id', 1, 0, 10, array('planned')),
             'considered' => $this->get->getIdeas('id', 1, 0, 10, array('considered')),
+            'new' => $this->get->getIdeas('id', 1, 0, 10, array('new')),
         );
 
 		$this->load->view('_templates/header', $data);
