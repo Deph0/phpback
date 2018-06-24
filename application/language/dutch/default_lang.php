@@ -52,6 +52,7 @@
     $lang['last_started_ideas'] = 'Meest recent gestarte ideeën';
     $lang['last_planned_ideas'] = 'Meest recent ingeplande ideeën';
     $lang['last_considered_ideas'] = 'Meest recent behandelde ideeën';
+    $lang['last_new_ideas'] = 'Meest recent nieuwe ideeën';
 
     $lang['form_remember'] = 'Onthoudt mij';
     $lang['form_full_name'] = 'Volledige naam';

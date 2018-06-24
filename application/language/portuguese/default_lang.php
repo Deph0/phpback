@@ -52,6 +52,7 @@
     $lang['last_started_ideas'] = 'Últimas Idéias Iniciadas';
     $lang['last_planned_ideas'] = 'Últimas Idéias Planejadas';
     $lang['last_considered_ideas'] = 'Últimas Idéias Consideradas';
+    $lang['last_new_ideas'] = 'Últimas novas ideias';
 
     $lang['form_remember'] = 'Manter conectado';
     $lang['form_full_name'] = 'Nome completo';

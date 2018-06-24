@@ -52,6 +52,7 @@
     $lang['last_started_ideas'] = 'ide yang baru dimulai';
     $lang['last_planned_ideas'] = 'Ide yang baru direncanakan';
     $lang['last_considered_ideas'] = 'Ide yang baru dipertimbangkan';
+    $lang['last_new_ideas'] = 'Gagasan baru terbaru';
 
     $lang['form_remember'] = 'Ingat saya';
     $lang['form_full_name'] = 'nama Lengkap';

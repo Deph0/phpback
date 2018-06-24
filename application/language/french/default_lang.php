@@ -52,6 +52,7 @@ $lang['last_completed_ideas'] = 'Dernières idées terminées';
 $lang['last_started_ideas'] = 'Dernières idées commencées';
 $lang['last_planned_ideas'] = 'Dernières idées planifiées';
 $lang['last_considered_ideas'] = 'Dernières idées considérées';
+$lang['last_new_ideas'] = 'Dernières nouvelles idées';
 
 $lang['form_remember'] = 'Se rappeler de moi';
 $lang['form_full_name'] = 'Nom complet';
