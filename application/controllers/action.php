@@ -31,10 +31,6 @@ class Action extends CI_Controller{
         $name = $this->input->post('name', true);
 
         if($this->get->getSetting('recaptchapublic') != ""){
-            //$resp = recaptcha_check_answer($this->get->getSetting('recaptchaprivate'),
-            //                        $_SERVER["REMOTE_ADDR"],
-            //                        $_POST["recaptcha_challenge_field"],
-            //                        $_POST["recaptcha_response_field"]);
 			$resp = new recaptchalib($this->get->getSetting('recaptchaprivate'), $_POST["g-recaptcha-response"] );
 
             if(!$resp->isValid()){
