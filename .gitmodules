@@ -1,0 +1,3 @@
+[submodule "public/recaptcha"]
+	path = public/recaptcha
+	url = https://github.com/Mim0oo/PHPreCAPTCHA.git
