@@ -31,12 +31,13 @@ class Action extends CI_Controller{
         $name = $this->input->post('name', true);
 
         if($this->get->getSetting('recaptchapublic') != ""){
-            $resp = recaptcha_check_answer($this->get->getSetting('recaptchaprivate'),
-                                    $_SERVER["REMOTE_ADDR"],
-                                    $_POST["recaptcha_challenge_field"],
-                                    $_POST["recaptcha_response_field"]);
+            //$resp = recaptcha_check_answer($this->get->getSetting('recaptchaprivate'),
+            //                        $_SERVER["REMOTE_ADDR"],
+            //                        $_POST["recaptcha_challenge_field"],
+            //                        $_POST["recaptcha_response_field"]);
+			$resp = new recaptchalib($this->get->getSetting('recaptchaprivate'), $_POST["recaptcha_response_field"] );
 
-            if(!$resp->is_valid){
+            if(!$resp->isValid()){
                 header('Location: '. base_url() .'home/register/recaptcha');
                 return;
             }
@@ -60,12 +61,12 @@ class Action extends CI_Controller{
 
         if($this->post->add_user($name, $email, $pass, $votes, false)){
             //$message = "Welcome to our feedback: $title\n\nYour Email: $email\nYour Password: $pass\n\n\nPlease login here:" . base_url() . "home/login\n";
-            $message = "Welcome to our feedback: $title\n\nnPlease login here:" . base_url() . "home/login\n";
+            $message = "Welcome to our feedback Page, $anme!\n\n\nPlease login here with the email and password you created:\n" . base_url() . "home/login\n";
             $this->load->library('email');
 
             $this->email->initialize($this->get->email_config());
 
-            $this->email->from($mainmail, 'PHPBack');
+            $this->email->from($mainmail, "$title");
             $this->email->to($email);
 
             $this->email->subject("New account - $title");
