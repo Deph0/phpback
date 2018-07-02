@@ -35,7 +35,7 @@ class Action extends CI_Controller{
             //                        $_SERVER["REMOTE_ADDR"],
             //                        $_POST["recaptcha_challenge_field"],
             //                        $_POST["recaptcha_response_field"]);
-			$resp = new recaptchalib($this->get->getSetting('recaptchaprivate'), $_POST["recaptcha_response_field"] );
+			$resp = new recaptchalib($this->get->getSetting('recaptchaprivate'), $_POST["g-recaptcha-response"] );
 
             if(!$resp->isValid()){
                 header('Location: '. base_url() .'home/register/recaptcha');
