@@ -61,7 +61,7 @@ class Action extends CI_Controller{
 
         if($this->post->add_user($name, $email, $pass, $votes, false)){
             //$message = "Welcome to our feedback: $title\n\nYour Email: $email\nYour Password: $pass\n\n\nPlease login here:" . base_url() . "home/login\n";
-            $message = "Welcome to our feedback Page, $anme!\n\n\nPlease login here with the email and password you created:\n" . base_url() . "home/login\n";
+            $message = "Welcome to our feedback Page, $name!\n\n\nPlease login here with the email and password you created:\n" . base_url() . "home/login\n";
             $this->load->library('email');
 
             $this->email->initialize($this->get->email_config());
